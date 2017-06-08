@@ -1044,6 +1044,7 @@ void HTTPHeader::checkheader(bool allowpersistent)
         outgoing = false;
     }
 
+    if (header.size() > 1) {
     for (std::deque<String>::iterator i = header.begin() + 1; i != header.end(); i++) { // check each line in the headers
         // index headers - try to perform the checks in the order the average browser sends the headers.
         // also only do the necessary checks for the header type (sent/received).
@@ -1102,6 +1103,7 @@ void HTTPHeader::checkheader(bool allowpersistent)
         std::cout << "Header value from client: " << (*i) << " Line: " << __LINE__ << " Function: " << __func__ << std::endl;
 #endif
     }
+}
 
     //if its http1.1
     bool onepointone = false;
