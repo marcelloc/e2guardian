@@ -4,7 +4,7 @@ SUBDIRS= languages . scripts
 
 DATATOPDIR = $(datadir)/$(PACKAGE_NAME)
 
-FLISTS = transparent1x1.gif e2guardian.pl blockedflash.swf
+FLISTS = transparent1x1.gif e2guardian.pl blockedflash.swf e2gerror.php
 
 EXTRA_DIST = $(FLISTS)
 
