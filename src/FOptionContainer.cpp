@@ -44,7 +44,7 @@ std::deque<String> *ipToHostname(const char *ip)
                 result->push_back(String(inet_ntoa(**addrptr)));
             }
         } else {
-                result->push_back(String("DNSERROR"));
+                result->push_back(ip);
 		return result;
 	}		
 		
